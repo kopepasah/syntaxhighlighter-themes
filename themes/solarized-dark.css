@@ -1,0 +1,118 @@
+/**
+ * Solarized Dark 
+ */
+.syntaxhighlighter {
+	background-color: #002b36 !important;
+}
+.syntaxhighlighter ::selection {
+	background: #657B83 !important;
+	color: #93A1A1 !important;
+}
+.syntaxhighlighter td {
+	padding: 0;
+}
+.syntaxhighlighter .line.alt1 {
+	background-color: #002b36 !important;
+}
+.syntaxhighlighter .line.alt2 {
+	background-color: #002b36 !important;
+}
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+	background-color: #073642 !important;
+}
+.syntaxhighlighter .line.highlighted.number {
+	color: #94A2A2 !important;
+}
+.syntaxhighlighter table caption {
+	color: #94A2A2 !important;
+}
+.syntaxhighlighter table td.gutter .line,
+.syntaxhighlighter table td.code .line {
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+}
+.syntaxhighlighter .gutter {
+	text-align: right;
+	color: #93A1A1 !important;
+}
+.syntaxhighlighter .gutter .line {
+	padding-right: 10px;
+	border-right: 1px solid #596E75 !important;
+}
+/*.syntaxhighlighter table td.gutter .line {
+	font-size: .8rem !important;
+	padding-top: .15rem !important;
+	padding-bottom: .1rem !important;
+}*/
+.syntaxhighlighter .gutter .line.highlighted {
+	background-color: #596E75 !important;
+/*	color: #93A1A1 !important;*/
+}
+.syntaxhighlighter.printing .line .content {
+	border: none !important;
+}
+.syntaxhighlighter.collapsed {
+	overflow: visible !important;
+}
+.syntaxhighlighter.collapsed .toolbar {
+	color: #268BD2 !important;
+	background: #002b36 !important;
+}
+.syntaxhighlighter.collapsed .toolbar a {
+	color: #93A1A1 !important;
+}
+.syntaxhighlighter.collapsed .toolbar a:hover {
+	color: #DC312F !important;
+}
+.syntaxhighlighter .toolbar {
+	color: #002b36 !important;
+	background: #6ce26c !important;
+	border: none !important;
+}
+.syntaxhighlighter .toolbar a {
+	color: #93A1A1 !important;
+}
+.syntaxhighlighter .toolbar a:hover {
+	color: #94A2A2 !important;
+}
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+	color: #94A2A2 !important;
+}
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+	color: #667C83 !important;
+}
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+	color: #29A198 !important;
+}
+.syntaxhighlighter .keyword {
+	color: #B58917 !important;
+}
+.syntaxhighlighter .preprocessor {
+	color: #93A1A1 !important;
+}
+.syntaxhighlighter .variable {
+	color: #268BD2 !important;
+}
+.syntaxhighlighter .value {
+	color: #29A198 !important;
+}
+.syntaxhighlighter .functions {
+	color: #DE4C42 !important;
+}
+.syntaxhighlighter .constants {
+	color: #6C71C4 !important;
+}
+.syntaxhighlighter .script {
+	font-weight: bold !important;
+	color: #B58917 !important;
+	background-color: none !important;
+}
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+	color: #93A1A1 !important;
+}
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
+	color: #D33682 !important;
+}
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
+	color: #DC312F !important;
+}
