@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Syntaxhighlighter Evolved Themes
+Plugin Name: SyntaxHighlighter Evolved Themes
 Version: 1.0.0
 Plugin URI: http://github.com/kopepasah/syntaxhighlighter-themes/
 Description: Adds new themes for Syntaxhighlighter Evolved Plugin.
@@ -46,4 +46,4 @@ function kp_syntaxhighlighter_themes_filter_syntaxhighlighter_theme( $themes ) {
 
 	return $themes;
 }
-add_filter( 'syntaxhighlighter_themes', 'sxhet_add_syntaxhighlighter_theme' );
+add_filter( 'syntaxhighlighter_themes', 'kp_syntaxhighlighter_themes_filter_syntaxhighlighter_theme' );
