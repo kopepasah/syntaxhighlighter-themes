@@ -1,30 +1,32 @@
 /**
- * Solarized Dark 
+ * Tomorrow Night
  */
 .syntaxhighlighter {
-	background-color: #002b36 !important;
+	background-color: #1d1f21 !important;
 }
 .syntaxhighlighter ::selection {
-	background: #657B83 !important;
-	color: #93A1A1 !important;
+	background: #373b41 !important;
+	color: #c5c8c6 !important;
 }
 .syntaxhighlighter td {
 	padding: 0;
 }
 .syntaxhighlighter .line.alt1 {
-	background-color: #002b36 !important;
+	background-color: #1d1f21 !important;
 }
 .syntaxhighlighter .line.alt2 {
-	background-color: #002b36 !important;
+	background-color: #1d1f21 !important;
 }
 .syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
-	background-color: #073642 !important;
+	background-color: #282a2e !important;
 }
 .syntaxhighlighter .line.highlighted.number {
 	color: #94A2A2 !important;
 }
 .syntaxhighlighter table caption {
 	color: #94A2A2 !important;
+	background-color: #4B4C4F !important;
+	border-bottom: 1px solid #666767 !important;
 }
 .syntaxhighlighter table td.gutter .line,
 .syntaxhighlighter table td.code .line {
@@ -33,11 +35,12 @@
 }
 .syntaxhighlighter .gutter {
 	text-align: right;
-	color: #93A1A1 !important;
+	color: #767676 !important;
 }
 .syntaxhighlighter .gutter .line {
 	padding-right: 10px;
-	border-right: 1px solid #596E75 !important;
+	background: #4B4C4F !important;
+	border-right: 1px solid #666767 !important;
 }
 /*.syntaxhighlighter table td.gutter .line {
 	font-size: .8rem !important;
@@ -45,8 +48,8 @@
 	padding-bottom: .1rem !important;
 }*/
 .syntaxhighlighter .gutter .line.highlighted {
-	background-color: #596E75 !important;
-/*	color: #93A1A1 !important;*/
+	background-color: #1d1f21 !important;
+/*	color: #c5c8c6 !important;*/
 }
 .syntaxhighlighter.printing .line .content {
 	border: none !important;
@@ -55,22 +58,22 @@
 	overflow: visible !important;
 }
 .syntaxhighlighter.collapsed .toolbar {
-	color: #268BD2 !important;
-	background: #002b36 !important;
+	color: #1d1f21 !important;
+	background: #b5bd68 !important;
 }
 .syntaxhighlighter.collapsed .toolbar a {
-	color: #268BD2 !important;
+	color: #1d1f21 !important;
 }
 .syntaxhighlighter.collapsed .toolbar a:hover {
-	color: #DC312F !important;
+	color: #cc6666 !important;
 }
 .syntaxhighlighter .toolbar {
-	color: #012A36 !important;
-	background: #859918 !important;
+	color: #1d1f21 !important;
+	background: #b5bd68 !important;
 	border: none !important;
 }
 .syntaxhighlighter .toolbar a {
-	color: #012A36 !important;
+	color: #1d1f21 !important;
 }
 .syntaxhighlighter .toolbar a:hover {
 	color: #94A2A2 !important;
@@ -79,40 +82,40 @@
 	color: #94A2A2 !important;
 }
 .syntaxhighlighter .comments, .syntaxhighlighter .comments a {
-	color: #667C83 !important;
+	color: #969896 !important;
 }
 .syntaxhighlighter .string, .syntaxhighlighter .string a {
-	color: #29A198 !important;
+	color: #b5bd68 !important;
 }
 .syntaxhighlighter .keyword {
-	color: #B58917 !important;
+	color: #de935f !important;
 }
 .syntaxhighlighter .preprocessor {
-	color: #93A1A1 !important;
+	color: #c5c8c6 !important;
 }
 .syntaxhighlighter .variable {
-	color: #268BD2 !important;
+	color: #81a2be !important;
 }
 .syntaxhighlighter .value {
-	color: #29A198 !important;
+	color: #b5bd68 !important;
 }
 .syntaxhighlighter .functions {
-	color: #DE4C42 !important;
+	color: #cc6666 !important;
 }
 .syntaxhighlighter .constants {
-	color: #6C71C4 !important;
+	color: #B294BB !important;
 }
 .syntaxhighlighter .script {
 	font-weight: bold !important;
-	color: #B58917 !important;
+	color: #de935f !important;
 	background-color: none !important;
 }
 .syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
-	color: #93A1A1 !important;
+	color: #c5c8c6 !important;
 }
 .syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
-	color: #D33682 !important;
+	color: #F0C674 !important;
 }
 .syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
-	color: #DC312F !important;
+	color: #cc6666 !important;
 }

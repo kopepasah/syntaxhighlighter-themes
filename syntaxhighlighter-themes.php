@@ -7,6 +7,7 @@ Description: Adds new themes for Syntaxhighlighter Evolved Plugin.
 Author: Justin Kopepasah
 Author URI: http://kopepasah.com
 
+
 Copyright 2014  (email: justin@kopepasah.com)
 
 This program is free software; you can redistribute it and/or modify
@@ -24,26 +25,114 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-/**
- * Register and enqueue the new theme stylesheets.
- * 
- * @since 1.0.0
-**/
-function kp_syntaxhighlighter_themes_enqueue_styles() {
-	wp_register_style( 'syntaxhighlighter-theme-solarized-dark', plugins_url( 'themes/solarized-dark.css', __FILE__ ), array( 'syntaxhighlighter-core' ), '20140329', 'all' );
+class SyntaxHighlighter_Themes {
+	/**
+	 * @var SyntaxHighlighter_Themes
+	 * @since 1.0.0
+	*/
+	private static $instance;
+
+	/**
+	 * Our new themes.
+	 *
+	 * @var $themes
+	 * @since 1.0.0
+	*/
+	public $themes = array();
+
+	/**
+	 * Main SyntaxHighlighter Themes Instance
+	 *
+	 * @since 1.0.0
+	 * @static
+	*/
+	public static function instance() {
+		if ( ! self::$instance ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
+	/**
+	 * SyntaxHighlighter Themes Constructor
+	 *
+	 * @since 1.0.0
+	*/
+	public function __construct() {
+		// If SyntaxHighlighter is not active, give a notice and bail.
+		if ( ! class_exists( 'SyntaxHighlighter' ) ) {
+			add_action( 'admin_notices', array( $this, 'notice' ) );
+			return;
+		}
+
+		// Load localization domain
+		load_plugin_textdomain( 'syntaxhighlighter-themes', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+		// Setup our new themes.
+		$this->themes = array(
+			'solarized-dark'  => __( 'Solarized Dark', 'syntaxhighlighter-theme' ),
+			'solarized-light' => __( 'Solarized Light', 'syntaxhighlighter-theme' ),
+			'tomorrow-night'  => __( 'Tomorrow Night', 'syntaxhighlighter-theme' ),
+		);
+
+		// Register our scripts on the frontend and admin.
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_styles' ) );
+
+		// Add our new themes.
+		add_filter( 'syntaxhighlighter_themes', array( $this, 'filter_themes' ) );
+	}
+
+	/**
+	 * Notice when SyntacHighlighter is not active.
+	 *
+	 * @since 1.0.0
+	*/
+	public function notice() {
+		$notice = sprintf( __( 'SyntaxHighlighter Evolved Themes requires %sSyntaxHighlighter Evolved%s.', 'syntaxhighlighter-themes' ), '<a href="https://wordpress.org/plugins/syntaxhighlighter/">', '</a>' );
+
+		echo '<div class="error"><p>' . $notice . '</p></div>';
+	}
+
+	/**
+	 * Register our new styles for use in the plugin.
+	 *
+	 * @since 1.0.0
+	*/
+	public function register_styles() {
+		foreach ( $this->themes as $slug => $name ) {
+			wp_register_style( 'syntaxhighlighter-theme-' . $slug, plugins_url( 'themes/' . $slug . '.css', __FILE__ ), array( 'syntaxhighlighter-core' ), '20140330', 'all' );
+		}
+	}
+
+	/**
+	 * Hook into the syntaxhighlighter_themes filter
+	 * to add our new themes.
+	 *
+	 * @since 1.0.0
+	 * @param string Currently registered themes for SyntaxHighlighter.
+	*/
+	public function filter_themes( $themes ) {
+		foreach ( $this->themes as $slug => $name ) {
+			$themes[$slug] = $name;
+		}
+
+		return $themes;
+	}
 }
-add_action( 'wp_enqueue_scripts', 'kp_syntaxhighlighter_themes_enqueue_styles' );
-add_action( 'admin_enqueue_scripts', 'kp_syntaxhighlighter_themes_enqueue_styles' );
 
 /**
- * Use syntaxhighlighter_themes filter to add new
- * themes.
+ * Instantiate this plugin after plugins have loaded,
+ * but before SyntaxHighlighter class is instantiated.
+ *
+ * We do this because we have a check for the class of
+ * SyntaxHighlighter, but the need the code to load
+ * before SyntaxHighlighter code.
  *
  * @since 1.0.0
 */
-function kp_syntaxhighlighter_themes_filter_syntaxhighlighter_theme( $themes ) {
-	$themes['solarized-dark'] = 'Solarized Dark';
-
-	return $themes;
+function syntaxhighlighter_themes() {
+	return SyntaxHighlighter_Themes::instance();
 }
-add_filter( 'syntaxhighlighter_themes', 'kp_syntaxhighlighter_themes_filter_syntaxhighlighter_theme' );
+add_action( 'plugins_loaded', 'syntaxhighlighter_themes' );
