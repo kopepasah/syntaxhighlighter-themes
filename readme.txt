@@ -4,7 +4,7 @@ Donate link: http://kopepasah.com/donate/
 Tags: syntaxhighlighter, themes, solarized, tomorrow theme
 Requires at least: 3.3
 Tested up to: 3.9
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,28 +16,27 @@ NOTE: This plugin requires [SyntaxHighlighter Evolved](https://wordpress.org/plu
 
 Once both are activate, new themes are added to the availble themes on the SyntaxHighlighter Evolved settings page.
 
-![New themes](http://f.cl.ly/items/1Q1v2H2z1U1z2n2s3B3L/new-themes.jpg "New themes")
-
-Here is an example of the Solarized Dark theme.
-
-![Solarized Dark](http://f.cl.ly/items/200e0t2e2J1Q3d1w2f3f/solarized-dark.jpg "Solarized Dark")
+For more information or to add your own new theme, visit the [Github repo](https://github.com/kopepasah/syntaxhighlighter-themes).
 
 == Installation ==
 
-1. Upload `syntaxhighlighter-themes` to your `/plugins/` directory for WordPress
+1. Upload `syntaxhighlighter-evolved-themes` to your `/plugins/` directory for WordPress
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
 
 = Will you add new themes?
 
-Of course, just [send me a request](http://kopepasah.com/contact).
+Of course (when I have a time), just [send me a request](http://kopepasah.com/contact). In your request, be sure to describe the theme in detail or send me a link to a colorscheme of a theme. A simple screenshot will not suffice.
 
 == Screenshots ==
 
-None
+1. New themes.
+2. Example of the Solarized Dark theme.
 
 == Changelog ==
+= 1.0.1 =
+* Updated readme.txt
 
 = 1.0.0 =
 * Initial Release Version
