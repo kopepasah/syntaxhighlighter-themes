@@ -10,6 +10,7 @@ This WordPress plugin adds new themes to [SyntaxHighlighter Evolved](https://git
 	- Dark
 - [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme)
 	- Night
+- [Monokai](http://karenwong.me/tutorials/2012/12/syntaxhighlighter-color-scheme-monokai/)
 	
 ##Requests
 If you have a new theme that you would like me to add, fill free to [send me a request](http://kopepasah.com/contact). However, note that this theme may not appear exactly as it does in your editor.

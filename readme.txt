@@ -4,7 +4,7 @@ Donate link: http://kopepasah.com/donate/
 Tags: syntaxhighlighter, themes, solarized, tomorrow theme
 Requires at least: 3.3
 Tested up to: 3.9
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,13 @@ Adds new themes to the SyntaxHighlighter Evolved plugin.
 NOTE: This plugin requires [SyntaxHighlighter Evolved](https://wordpress.org/plugins/syntaxhighlighter/) in order to work.
 
 Once both are activate, new themes are added to the availble themes on the SyntaxHighlighter Evolved settings page.
+
+- [Solarized Theme](http://ethanschoonover.com/solarized)
+	- Light
+	- Dark
+- [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme)
+	- Night
+- [Monokai](http://karenwong.me/tutorials/2012/12/syntaxhighlighter-color-scheme-monokai/)
 
 For more information or to add your own new theme, visit the [Github repo](https://github.com/kopepasah/syntaxhighlighter-themes).
 
@@ -35,6 +42,9 @@ Of course (when I have a time), just [send me a request](http://kopepasah.com/co
 2. Example of the Solarized Dark theme.
 
 == Changelog ==
+= 1.0.2 =
+* Add Monokai theme
+
 = 1.0.1 =
 * Updated readme.txt
 

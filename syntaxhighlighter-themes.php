@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: SyntaxHighlighter Evolved Themes
-Version: 1.0.1
+Version: 1.0.2
 Plugin URI: http://github.com/kopepasah/syntaxhighlighter-themes/
 Description: Adds new themes for Syntaxhighlighter Evolved Plugin.
 Author: Justin Kopepasah
@@ -74,6 +74,8 @@ class SyntaxHighlighter_Themes {
 			'solarized-dark'  => __( 'Solarized Dark', 'syntaxhighlighter-theme' ),
 			'solarized-light' => __( 'Solarized Light', 'syntaxhighlighter-theme' ),
 			'tomorrow-night'  => __( 'Tomorrow Night', 'syntaxhighlighter-theme' ),
+			// http://karenwong.me/tutorials/2012/12/syntaxhighlighter-color-scheme-monokai/
+			'monokai'         => __( 'Monokai', 'syntaxhighlighter-theme' ),
 		);
 
 		// Register our scripts on the frontend and admin.
